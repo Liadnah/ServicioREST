@@ -64,8 +64,13 @@
         			<log message="El nombre es: ${property.nombre}"/> 
         		        		
         		<setProperty propertyName="edad"><jsonpath resultType="String">$.edad</jsonpath></setProperty> 
-        			<log message="la edad es: ${property.edad}"/> 
+        			<log message="su edad es: ${property.edad}"/> 
+        		
+        		<setProperty propertyName="salario"><jsonpath resultType="String">$.salario</jsonpath></setProperty> 
+        			<log message="El salario es: ${property.salario}"/> 
         			
+
+        	
         	<choice>
 				<when>
 					<simple> ${property.edad} >= 18 </simple>
@@ -79,8 +84,11 @@
 			
 <!--	   or ##################################-->
 	
-			<bean method = "mayorEdad" ref="beanRouteFacade"></bean>
- 				<log loggingLevel="ERROR" message="su edad es: ${property.edad}" />
+<!--			<bean method = "mayorEdad" ref="beanRouteFacade"></bean>-->
+ 				
+<!-- 			<bean method = "Salario" ref="beanRouteFacade"></bean>-->
+ 			
+			<bean method = "Informacion" ref="beanRouteFacade"></bean>
         			
 
             <stop/>

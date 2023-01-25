@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Tue Jan 24 17:25:51 COT 2023</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Date">Date</td>
+<td class="Thread">Thread</td>
+<td class="Level">Level</td>
+<td class="Logger">Logger</td>
+<td class="LineOfCaller">LineOfCaller</td>
+<td class="Message">Message</td>
+</tr>
+
+
+<tr class="info even">
+<td class="Date">17:25:51.469</td>
+<td class="Thread">RMI TCP Connection(242)-127.0.0.1</td>
+<td class="Level">INFO</td>
+<td class="Logger">org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin</td>
+<td class="LineOfCaller">125</td>
+<td class="Message">Application shutdown requested.</td>
+</tr>
+
+<tr class="info odd">
+<td class="Date">17:25:51.473</td>
+<td class="Thread">RMI TCP Connection(242)-127.0.0.1</td>
+<td class="Level">INFO</td>
+<td class="Logger">org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext</td>
+<td class="LineOfCaller">984</td>
+<td class="Message">Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@46baf579: startup date [Mon Jan 23 17:59:36 COT 2023]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1bae316d</td>
+</tr>
+
+<tr class="info even">
+<td class="Date">17:25:51.474</td>
+<td class="Thread">RMI TCP Connection(242)-127.0.0.1</td>
+<td class="Level">INFO</td>
+<td class="Logger">org.apache.camel.spring.SpringCamelContext</td>
+<td class="LineOfCaller">3316</td>
+<td class="Message">Apache Camel 2.19.1 (CamelContext: camel) is shutting down</td>
+</tr>
+
+<tr class="info odd">
+<td class="Date">17:25:51.476</td>
+<td class="Thread">RMI TCP Connection(242)-127.0.0.1</td>
+<td class="Level">INFO</td>
+<td class="Logger">org.apache.camel.impl.DefaultShutdownStrategy</td>
+<td class="LineOfCaller">195</td>
+<td class="Message">Starting to graceful shutdown 4 routes (timeout 300 seconds)</td>
+</tr>
+
+<tr class="info even">
+<td class="Date">17:25:51.482</td>
+<td class="Thread">Camel (camel) thread #1 - ShutdownTask</td>
+<td class="Level">INFO</td>
+<td class="Logger">org.apache.camel.impl.DefaultShutdownStrategy</td>
+<td class="LineOfCaller">575</td>
+<td class="Message">Route: TESTPRUEBA-ROUTE-MAIN shutdown complete, was consuming from: cxfrs://bean:restApiEnpoint?bindingStyle=SimpleConsumer</td>
+</tr>
+
+<tr class="info odd">
+<td class="Date">17:25:51.483</td>
+<td class="Thread">Camel (camel) thread #1 - ShutdownTask</td>
+<td class="Level">INFO</td>
+<td class="Logger">org.apache.camel.impl.DefaultShutdownStrategy</td>
+<td class="LineOfCaller">668</td>
+<td class="Message">Route: generate-order-route shutdown complete, was consuming from: file://int</td>
+</tr>
+
+<tr class="info even">
+<td class="Date">17:25:51.484</td>
+<td class="Thread">Camel (camel) thread #1 - ShutdownTask</td>
+<td class="Level">INFO</td>
+<td class="Logger">org.apache.camel.impl.DefaultShutdownStrategy</td>
+<td class="LineOfCaller">668</td>
+<td class="Message">Route: validarEdad shutdown complete, was consuming from: direct://validarEdad</td>
+</tr>
+
+<tr class="info odd">
+<td class="Date">17:25:51.484</td>
+<td class="Thread">Camel (camel) thread #1 - ShutdownTask</td>
+<td class="Level">INFO</td>
+<td class="Logger">org.apache.camel.impl.DefaultShutdownStrategy</td>
+<td class="LineOfCaller">668</td>
+<td class="Message">Route: CONSULTA-DATOS shutdown complete, was consuming from: direct://consultarCliente</td>
+</tr>
+
+<tr class="info even">
+<td class="Date">17:25:51.485</td>
+<td class="Thread">RMI TCP Connection(242)-127.0.0.1</td>
+<td class="Level">INFO</td>
+<td class="Logger">org.apache.camel.impl.DefaultShutdownStrategy</td>
+<td class="LineOfCaller">259</td>
+<td class="Message">Graceful shutdown of 4 routes completed in 0 seconds</td>
+</tr>
+
+<tr class="info odd">
+<td class="Date">17:25:51.494</td>
+<td class="Thread">RMI TCP Connection(242)-127.0.0.1</td>
+<td class="Level">INFO</td>
+<td class="Logger">org.apache.camel.main.MainLifecycleStrategy</td>
+<td class="LineOfCaller">44</td>
+<td class="Message">CamelContext: camel has been shutdown, triggering shutdown of the JVM.</td>
+</tr>
+
+<tr class="info even">
+<td class="Date">17:25:51.497</td>
+<td class="Thread">RMI TCP Connection(242)-127.0.0.1</td>
+<td class="Level">INFO</td>
+<td class="Logger">org.apache.camel.spring.SpringCamelContext</td>
+<td class="LineOfCaller">3405</td>
+<td class="Message">Apache Camel 2.19.1 (CamelContext: camel) uptime 23 hours 26 minutes</td>
+</tr>
+
+<tr class="info odd">
+<td class="Date">17:25:51.498</td>
+<td class="Thread">RMI TCP Connection(242)-127.0.0.1</td>
+<td class="Level">INFO</td>
+<td class="Logger">org.apache.camel.spring.SpringCamelContext</td>
+<td class="LineOfCaller">3406</td>
+<td class="Message">Apache Camel 2.19.1 (CamelContext: camel) is shutdown in 0.023 seconds</td>
+</tr>
+
+<tr class="info even">
+<td class="Date">17:25:51.500</td>
+<td class="Thread">RMI TCP Connection(242)-127.0.0.1</td>
+<td class="Level">INFO</td>
+<td class="Logger">org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext</td>
+<td class="LineOfCaller">984</td>
+<td class="Message">Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7e36d508: startup date [Mon Jan 23 17:59:41 COT 2023]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@46baf579</td>
+</tr>
+
+<tr class="info odd">
+<td class="Date">17:25:51.505</td>
+<td class="Thread">RMI TCP Connection(242)-127.0.0.1</td>
+<td class="Level">INFO</td>
+<td class="Logger">org.springframework.context.support.DefaultLifecycleProcessor</td>
+<td class="LineOfCaller">358</td>
+<td class="Message">Stopping beans in phase 2147483647</td>
+</tr>
+
+<tr class="info even">
+<td class="Date">17:25:51.506</td>
+<td class="Thread">RMI TCP Connection(242)-127.0.0.1</td>
+<td class="Level">INFO</td>
+<td class="Logger">org.springframework.context.support.DefaultLifecycleProcessor</td>
+<td class="LineOfCaller">358</td>
+<td class="Message">Stopping beans in phase 0</td>
+</tr>
+
+<tr class="info odd">
+<td class="Date">17:25:51.507</td>
+<td class="Thread">RMI TCP Connection(242)-127.0.0.1</td>
+<td class="Level">INFO</td>
+<td class="Logger">org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter</td>
+<td class="LineOfCaller">449</td>
+<td class="Message">Unregistering JMX-exposed beans on shutdown</td>
+</tr>
+
+<tr class="info even">
+<td class="Date">17:25:51.507</td>
+<td class="Thread">RMI TCP Connection(242)-127.0.0.1</td>
+<td class="Level">INFO</td>
+<td class="Logger">org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter</td>
+<td class="LineOfCaller">241</td>
+<td class="Message">Unregistering JMX-exposed beans</td>
+</tr>
+
+<tr class="info odd">
+<td class="Date">17:25:51.507</td>
+<td class="Thread">RMI TCP Connection(242)-127.0.0.1</td>
+<td class="Level">INFO</td>
+<td class="Logger">org.springframework.jmx.export.annotation.AnnotationMBeanExporter</td>
+<td class="LineOfCaller">449</td>
+<td class="Message">Unregistering JMX-exposed beans on shutdown</td>
+</tr>
+
+<tr class="info even">
+<td class="Date">17:25:51.507</td>
+<td class="Thread">RMI TCP Connection(242)-127.0.0.1</td>
+<td class="Level">INFO</td>
+<td class="Logger">org.springframework.jmx.export.annotation.AnnotationMBeanExporter</td>
+<td class="LineOfCaller">241</td>
+<td class="Message">Unregistering JMX-exposed beans</td>
+</tr>
+
+<tr class="info odd">
+<td class="Date">17:25:51.512</td>
+<td class="Thread">Thread-3</td>
+<td class="Level">INFO</td>
+<td class="Logger">org.apache.camel.main.MainSupport$HangupInterceptor</td>
+<td class="LineOfCaller">85</td>
+<td class="Message">Received hang up - stopping the main instance.</td>
+</tr>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Wed Jan 25 14:33:29 COT 2023</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Date">Date</td>
+<td class="Thread">Thread</td>
+<td class="Level">Level</td>
+<td class="Logger">Logger</td>
+<td class="LineOfCaller">LineOfCaller</td>
+<td class="Message">Message</td>
+</tr>
+
+</table>
+</body></html>
