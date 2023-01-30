@@ -12,6 +12,7 @@ import javax.ws.rs.core.MediaType;
 import org.apache.camel.Body;
 
 import io.fabric8.quickstarts.camel.model.RequestConsulatarCliente;
+import io.fabric8.quickstarts.camel.model.numeros;
 import io.fabric8.quickstarts.camel.model.persona;
 
 public class Client {
@@ -29,6 +30,13 @@ public class Client {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public void validarEdad(@Body persona body) {
+	}
+	
+	@POST
+	@Path("/operacion")
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	public void operacion(@Body numeros body) {
 	}
 
 }

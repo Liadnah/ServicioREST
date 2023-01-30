@@ -53,7 +53,8 @@
             <stop id="_stop1"/>
         </route>
         
-        
+<!-- ===================================================================================       -->
+ 
         
         <route id="validarEdad">
             <from uri="direct:validarEdad"/>           
@@ -93,6 +94,34 @@
 
             <stop/>
         </route>
+       
+<!-- ===================================================================================       -->
+<!--        CALCULADORA         -->
+
+        <route id="operacion">
+            <from uri="direct:operacion"/>           
+            <marshal ref="serializer"/>          
+            <log loggerRef="rh1" message="Despues de consumir el DataSource ${body}"/>
+            
+                <setProperty propertyName="operacion"><jsonpath resultType="String">$.operacion</jsonpath></setProperty> 
+        			<log message="Operacion: ${property.operacion}"/> 
+            
+        		<setProperty propertyName="num1"><jsonpath resultType="String">$.num1</jsonpath></setProperty> 
+        			<log message="numero 1: ${property.num1}"/> 
+        		        		
+        		<setProperty propertyName="num2"><jsonpath resultType="String">$.num2</jsonpath></setProperty> 
+        			<log message="numero 2: ${property.num2}"/> 
+        		
+        			
+ 			
+			<bean method = "ResultadoOperacion" ref="beanRouteFacade"></bean>
+        			
+
+            <stop/>
+        </route>
+        
+<!-- ===================================================================================       -->
+ 
         
         
 

@@ -3,6 +3,8 @@ package io.fabric8.quickstarts.camel.uitl;
 import org.apache.camel.Exchange;
 import org.hibernate.validator.internal.util.privilegedactions.GetMethodFromPropertyName;
 
+import io.fabric8.quickstarts.camel.model.ResponseNumeros;
+import io.fabric8.quickstarts.camel.model.numeros;
 import io.fabric8.quickstarts.camel.model.persona;
 
 public class RouteFade {
@@ -59,10 +61,56 @@ public class RouteFade {
 		ResponsePersona.setSalario((String) exchange.getProperty("salario"));
 		
 		exchange.getIn().setBody(ResponsePersona);
-
-		
 	}
 	
+	public void ResultadoOperacion(Exchange exchange) {
+		
+		ResponseNumeros response_numeros = new ResponseNumeros();
+		
+		String  tipo_operacion = (String) exchange.getProperty("operacion");
+		
+		String  numero1 = (String) exchange.getProperty("num1");
+		Double a  = Double.parseDouble(numero1);
+		
+		String  numero2 = (String) exchange.getProperty("num2");
+		Double b  = Double.parseDouble(numero2);
+		
+		Double  resulta;
+		
+		
+		if (tipo_operacion.contains("suma")){
+        	
+			resulta = a + b;
+			response_numeros.setResultado(resulta);		
+		}
+		
+		else if (tipo_operacion.contains("resta")){
+        	
+			resulta = a - b;
+			response_numeros.setResultado(resulta);	
+		}
+		
+		else if (tipo_operacion.contains("multiplicacion")){
+        	
+			resulta = a * b;
+			response_numeros.setResultado(resulta);	
+		}
+
+		else if (tipo_operacion.contains("division")){
+        	
+			resulta = a / b;
+			response_numeros.setResultado(resulta);	
+		}
+		
+		else {
+			resulta = null;
+		}
+		
+
+
+        exchange.getIn().setBody(response_numeros);
+
+	}
 }
 
 
